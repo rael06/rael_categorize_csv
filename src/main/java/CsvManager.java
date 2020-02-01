@@ -31,4 +31,20 @@ public class CsvManager {
 
         return csvReader.readAll();
     }
+
+    public List<Integer> categorize(List<String> col) {
+        List<Integer> categorizedCol = new ArrayList<>();
+        List<String> categories = new ArrayList<>();
+        for (String row : col) {
+            if(!categories.contains(row)){
+                categories.add(row);
+            }
+        }
+
+        for (String row : col) {
+            categorizedCol.add(categories.indexOf(row));
+        }
+
+        return categorizedCol;
+    }
 }

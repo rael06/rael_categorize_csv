@@ -6,8 +6,8 @@ public class Main {
         String source = args[0];
         CsvManager csvManager = new CsvManager(source);
         try {
-            List<String> col = csvManager.extractCol(2);
-            col.forEach(System.out::println);
+            List<String> col = csvManager.extractCol(1);
+            List<Integer> categorizedCol = csvManager.categorize(col);
         } catch (IOException e) {
             e.printStackTrace();
         }
