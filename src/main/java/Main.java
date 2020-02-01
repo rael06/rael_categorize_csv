@@ -8,6 +8,7 @@ public class Main {
         try {
             List<String> col = csvManager.extractCol(1);
             List<Integer> categorizedCol = csvManager.categorize(col);
+            csvManager.writeCategorizedCol(categorizedCol, args[1]);
         } catch (IOException e) {
             e.printStackTrace();
         }
